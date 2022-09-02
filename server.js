@@ -1,11 +1,15 @@
 const express = require("express")
+const app = express()
 const PORT = 8000
+const connectDB = require("./config/database")
 const main = require("./routes/main.js")
 const submitPage = require("./routes/dataSubmit.js")
 
 
 
-const app = express()
+require('dotenv').config({path: './config/.env'})
+
+connectDB()
 
 
 
