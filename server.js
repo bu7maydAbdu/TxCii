@@ -1,6 +1,7 @@
 const express = require("express")
 const PORT = 8000
-const mainPageController = require("./controllers/mainController.js")
+const main = require("./routes/main.js")
+const submitPage = require("./routes/dataSubmit.js")
 
 
 
@@ -15,11 +16,12 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 
-app.use("/", mainPageController)
+app.use("/", main)
+app.use("/submit", submitPage)
 
 
 
 
-app.listen(pr.env.PORT || PORT, ()=> {
-
+app.listen(process.env.PORT || PORT, ()=> {
+console.log(`the server is running on port ${PORT}`)
 })
