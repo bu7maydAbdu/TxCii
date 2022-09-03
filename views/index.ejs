@@ -22,8 +22,16 @@
     
 <h1>welcome to home page</h1>
     
-
-
+<ul>
+    <% data.forEach( el => { %>
+        <li>
+            <span ><%= el.letter %></span>
+            <!-- <span><%= el.priority %></span> -->
+            <span ><%= el.binaryEq %></span>
+        </li>
+    <% }) %>   
+</ul>
+ 
 
 
   
@@ -36,6 +44,5 @@
 
     
 
-    <script src='js/main.js'></script>
 </body>
 </html>
