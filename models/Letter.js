@@ -7,9 +7,8 @@ const LetterSchema = new mongoose.Schema({
         required : true
     }, 
     binaryEq : {
-        type : Number, 
+        type : String, 
         required : true,
-        unique : true
     }
 
 })

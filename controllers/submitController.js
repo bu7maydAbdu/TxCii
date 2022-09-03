@@ -7,8 +7,7 @@ module.exports = {
    } , 
    addLetter :async (request, response)=>{
     try{
-        const numberedBinaryEquivalent = Number( request.body.binaryEquivalent)
-        await Letter.create({letter : request.body.letter, binaryEq : numberedBinaryEquivalent})
+        await Letter.create({letter : request.body.letter, binaryEq : request.body.binaryEquivalent})
         console.log('letter has been added!')
 
         response.redirect("/submit")
