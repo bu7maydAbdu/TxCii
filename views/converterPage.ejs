@@ -12,23 +12,51 @@
 
 
     
-<h1>welcome to home page</h1>
+<h1></h1>
+<main>
+    <section class="binaryDisplay">
+
+        <p><%= data  %></p>
+    
+    </section>
+</main>
     
 
-  <form action="/converter/converttobinary" method="POST">
-    <input type="text" name="texttitle">
-
-    <textarea name="textToConvert" id="textToConvert" cols="30" >
-
-    </textarea>
-    <input type="submit">
-
-  </form>
-
-<%    <%= data %>  %>
 
 
-    
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    main {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+       height: 100vh;
+       background-image: url(https://gifimage.net/wp-content/uploads/2017/09/binary-code-gif-5.gif);
+       background-color: black !important;
+    filter: blur(5);
+       background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+ }
+    .binaryDisplay{
+        background-color: black;
+        height: 200px;
+        width: 500px;
+        border: 3px solid green;
+        text-align: center;
+    }
+    p {
+        color: greenyellow;
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
+</style>    
 
 </body>
 </html>

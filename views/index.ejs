@@ -22,19 +22,19 @@
     
 <h1>welcome to home page</h1>
     
-<ul>
-    <% data.forEach( el => { %>
-        <li>
-            <span ><%= el.letter %></span>
-            <!-- <span><%= el.priority %></span> -->
-            <span ><%= el.binaryEq %></span>
-        </li>
-    <% }) %>   
-</ul>
- 
+<main>
+    <form action="/converttobinary" method="post">    
+        <textarea name="textToConvert" id="textToConvert" cols="30" >
+    
+        </textarea>
+        <input type="submit">
+    
+      </form>
+</main>
 
 
-  
+
+
   
   
 
@@ -43,6 +43,51 @@
   
 
     
+<style>
+    * ,*::before, *::after{
+        margin: 0;
+        padding: 0;
+    }
+    main {
+        width: 100vw;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input {
+        padding: 20px;
+        border-radius: 30px;
+    }
+    form {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        background-color: black;
+        border: 3px solid green;
+        border-radius: 10px;
+    }
+    textarea {
+        width: 500px;
+        height: 200px;
+        border-radius: 10px;
+        border: 2px solid lightgreen;
+        background-color: black;
+        color: aqua;
+    }
+    body {
+        background-image: url(https://th.bing.com/th/id/R.c8202cdf054138cf9ab1d04f652ab908?rik=CiOW2d0CL7olEQ&riu=http%3a%2f%2fpa1.narvii.com%2f6456%2f08c94babafab082ce8751dd2fcb2c09878b63447_00.gif&ehk=2sVxcvgokxrh%2fOG64kYlgBel9WdFvb2EFV%2fNCHOL20o%3d&risl=&pid=ImgRaw&r=0);
 
+       width:  100vw;
+        max-height: 100vh;
+        background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+    }
+</style>
 </body>
 </html>
