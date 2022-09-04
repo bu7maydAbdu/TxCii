@@ -60,21 +60,19 @@
         padding: 0;
     }
     h1 {
-        position: absolute;
+        position: relative;
         color: white;
         font-family: 'Press Start 2P', cursive;
         font-size: 6.5rem;    
         margin-top: 50px;
-        left: 36.5%;
         animation: flicker 1.5s infinite alternate;
     }
  h2 {
-    position: absolute;
+    position: relative;
         color: lightgreen;
         font-family: 'Press Start 2P', cursive;
         font-size: 1rem;
-        margin-top: 160px;
-        left: 36.5%;
+        margin-top: 20px;
 
  }
 
@@ -143,7 +141,7 @@
     
 
     form {
-        position: absolute;
+        position: relative;
         width: 500px;
         height: 500px;
         display: flex;
@@ -153,6 +151,7 @@
         background: linear-gradient(90deg, rgba(0,77,71,1) 0%, rgba(0,0,0,1) 46%, rgba(0,77,71,1) 100%);
         /* border: 3px solid lightgreen; */
         border-radius: 10px;
+        margin-top: -100px;
     }
     textarea {
         width: 500px;
@@ -200,6 +199,22 @@ textarea::-webkit-scrollbar-thumb {
         background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; 
+    }
+    @media all and (max-width: 571px) {
+        form {
+width: 80vw;
+    } 
+    textarea {
+        width: 80vw;
+     
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 10px;
+    }
+
     }
 </style>
 
