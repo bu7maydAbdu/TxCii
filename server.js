@@ -4,7 +4,6 @@ const cors = require("cors")
 const PORT = 8000
 const connectDB = require("./config/database")
 const main = require("./routes/main.js")
-const submitPage = require("./routes/dataSubmit.js")
 const converter = require("./routes/converter")
 
 
@@ -29,7 +28,6 @@ app.use(express.json())
 
 
 app.use("/", main)
-app.use("/submit", submitPage)
 app.use("/converter", converter )
 
 

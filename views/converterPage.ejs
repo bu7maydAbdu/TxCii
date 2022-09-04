@@ -14,6 +14,27 @@
     
 <h1></h1>
 <main>
+
+    <div class="preloader"><span class="preloader-js">
+        <span class="back">
+            <span>c</span>
+            <span>o</span>
+            <span>n</span>
+            <span>v</span>
+            <span>e</span>
+            <span>r</span>
+            <span>t</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
+        
+        
+        
+        </span>
+    </span></div>
+    <canvas id='canvas'></canvas>
+
+
     <section class="binaryDisplay">
 
         <p><%= data  %></p>
@@ -45,6 +66,7 @@
   background-size: cover; 
  }
     .binaryDisplay{
+        position: absolute;
 background: rgba(15, 1, 1, 0.645);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -52,7 +74,8 @@ backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
         min-height: 200px;
         height: 500px;
-        width: 800px;
+        /* width: 800px; */
+        max-width: 800px;
         border: 3px solid lightgreen;
         text-align: center;
         word-wrap: break-word;  
@@ -84,7 +107,73 @@ backdrop-filter: blur(5px);
         margin-top: 10px;
         font-size: 1.8rem;
     }
-</style>    
+    .back {
+		margin:1em auto;
+		font-family:"Roboto";
+	}
+	.back span {
+        position: fixed;
+		font-size:3em;
+    border-radius: 50%;
+		color:#F2C640;
+		background:#262B37;
+		display:table-cell;
+		box-shadow:inset 0 0 5px rgba(0,0,0,0.3), 0 5px 0 #ccc;
+		padding: 0 10px;
+		line-height: 100px;
+		animation:jumb 2s infinite;
+	}
+	@keyframes jumb {
+		0% {
+			transform:translateY(0px)
+		}
+		50% {
+			transform:translateY(-180px);
+			box-shadow:0 15px 0 lightgreen;
+		}
+		100% {
+			transform:translateY(0px)	
+		}
+	}
+	.back span:nth-child(1) {
+		animation-delay:0s;
+	}
+	.back span:nth-child(2) {
+		animation-delay:.1s;	
+	}
+	.back span:nth-child(3) {
+		animation-delay:.2s;
+	}
+	.back span:nth-child(4) {
+		animation-delay:.3s;	
+	}
+	.back span:nth-child(5) {
+		animation-delay:.4s;
+	}
+	.back span:nth-child(6) {
+		animation-delay:.5s;	
+	}
+	.back span:nth-child(7) {
+		animation-delay:.6s;
+	}
+.back span:nth-child(8) {
+		animation-delay:.7s;
+	}
+.back span:nth-child(9) {
+		animation-delay:.8s;
+	}
+.back span:nth-child(10) {
+		animation-delay:.9s;
+	}
+</style>  
 
+
+<script>
+    //after window is loaded completely 
+    window.onload = function(){
+        //hide the preloader
+        document.querySelector(".preloader").style.display = "none";
+    }
+</script>
 </body>
 </html>
