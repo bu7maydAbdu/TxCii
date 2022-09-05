@@ -26,6 +26,7 @@ module.exports = {
     
                         console.log(txtArr[i])
                         const letterItem = await Letter.find({letter : txtArr[i]})
+                        console.log(letterItem)
                         const binaryEquivalent = letterItem[0].binaryEq
                     const purifiedBinary = binaryEquivalent.replace( /[\r\n]+/gm, "" ).trim();
                     console.log(purifiedBinary)
