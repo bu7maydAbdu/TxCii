@@ -5,3 +5,5 @@ TxCii is a simple text to binary converter , you can put any sentence and it wil
 <img src="https://i.ibb.co/6bpH65r/Screenshot-2022-09-05-011823.jpg" alt="Screenshot-2022-09-05-011823" border="0">
 
 ## How It's Made:
+
+**Tech Used:**
